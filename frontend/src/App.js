@@ -1,8 +1,15 @@
-import React from "react";
-import "./App.css";
+import React, { Component } from "react"
+import "./App.css"
+import WeekContainer from "../src/components/WeekContainer"
 
-function App() {
-  return <div className='App'></div>;
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <WeekContainer />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
