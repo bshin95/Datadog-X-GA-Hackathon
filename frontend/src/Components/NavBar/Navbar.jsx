@@ -1,23 +1,24 @@
 import React from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <nav>
+    <Router>
       <ul>
         <div className='row'>
           <img src='' alt='Datadog logo' class='logo'></img>
         </div>
         <li>
-          <a href='#'>Home</a>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          <a href='#'>Search</a>
+          <Link to='/'>Search</Link>
         </li>
         <li>
-          <a href='#'>Profile</a>
+          <Link to='/'>Profile</Link>
         </li>
       </ul>
-    </nav>
+    </Router>
   );
 };
 
