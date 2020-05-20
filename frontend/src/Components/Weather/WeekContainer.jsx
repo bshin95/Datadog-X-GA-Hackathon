@@ -34,7 +34,14 @@ class WeekContainer extends React.Component {
   }
 
   render() {
-    return <div>{this.formatDayCards()}</div>
+    // return <div>{this.formatDayCards()}</div>
+    // const weatherURL = `http://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=80bb87f8fbac9706c1f23b9ee85046c9`
+
+    return (
+      <div>
+        <h1>Hello World!</h1>
+      </div>
+    )
   }
 }
 

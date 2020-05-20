@@ -4,17 +4,17 @@ export const Navbar = () => {
   return (
     <nav>
       <ul>
-        <div className='row'>
-          <img src='' alt='Datadog logo' class='logo'></img>
+        <div className="row">
+          <img src="" alt="Datadog logo" class="logo"></img>
         </div>
         <li>
-          <a href='#'>Home</a>
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href='#'>Search</a>
+          <a href="#">Search</a>
         </li>
         <li>
-          <a href='#'>Profile</a>
+          <a href="#">Profile</a>
         </li>
       </ul>
     </nav>
