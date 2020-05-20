@@ -1,14 +1,13 @@
-import React, { Component } from "react"
-import "./App.css"
-import WeekContainer from "./components/Weather/WeekContainer"
+import React from "react";
+import "./App.css";
+import Container from "./components/Container";
 
 function App() {
   return (
     <div className="App">
-      <div>Social Network</div>
-      <WeekContainer />
+<Container/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
