@@ -1,11 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Social Network for Co-workers",
   "main": "index.js",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "",
