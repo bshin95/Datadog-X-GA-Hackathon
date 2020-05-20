@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
-import WeekContainer from './Weather/WeekContainer'
+import WeekContainer from "./Weather/WeekContainer";
+import Navbar from "./NavBar/Navbar";
+import Register from "./auth/Register";
+import Login from "./auth/Login";
 
 class Container extends Component {
   constructor(props) {
@@ -17,10 +20,17 @@ class Container extends Component {
     return (
       <div>
         <div>Social Network</div>
-        <WeekContainer />
+        <Navbar />
+        <section className="container">
+          <Switch>
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/Login" component={Login} />
+            <WeekContainer />
+          </Switch>
+        </section>
       </div>
     );
   }
 }
 
-export default Container
+export default withRouter(Container);
