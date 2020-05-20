@@ -21,10 +21,10 @@ class Container extends Component {
       <div>
         <div>Social Network</div>
         <Navbar />
-        <section className="container">
+        <section className='container'>
           <Switch>
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/Login" component={Login} />
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/Login' component={Login} />
             <WeekContainer />
           </Switch>
         </section>
