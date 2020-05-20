@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
-import Container from "./Components/Container";
+// import WeekContainer from "./components/Weather/WeekContainer"
 
 function App() {
   return (
     <div className='App'>
-      <Container />
+      <div>Social Network</div>
+      {/* <WeekContainer /> */}
     </div>
   );
 }
