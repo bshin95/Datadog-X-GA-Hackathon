@@ -5,6 +5,7 @@ import WeekContainer from "./Weather/WeekContainer";
 import Navbar from "./NavBar/Navbar";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
+import Landing from './LandingPage/Landing'
 
 class Container extends Component {
   constructor(props) {
@@ -21,10 +22,11 @@ class Container extends Component {
       <div>
         <div>Social Network</div>
         <Navbar />
-        <section className='container'>
+        <section className="container">
           <Switch>
-            <Route exact path='/register' component={Register} />
-            <Route exact path='/Login' component={Login} />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/Login" component={Login} />
             <WeekContainer />
           </Switch>
         </section>
