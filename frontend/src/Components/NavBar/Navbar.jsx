@@ -9,13 +9,13 @@ export const Navbar = () => {
           <img src='' alt='Datadog logo' class='logo'></img>
         </div>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to='/Home'>Home</Link>
         </li>
         <li>
-          <Link to='/'>Search</Link>
+          <Link to='/Search'>Search</Link>
         </li>
         <li>
-          <Link to='/'>Profile</Link>
+          <Link to='/Profile'>Profile</Link>
         </li>
       </ul>
     </Router>
