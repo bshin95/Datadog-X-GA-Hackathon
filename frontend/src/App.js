@@ -1,6 +1,6 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import Container from "./components/Container";
+import Container from "./Components/Container";
 
 // Redux
 import store from "./store";
