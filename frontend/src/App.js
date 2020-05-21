@@ -2,8 +2,6 @@
 import React, { useEffect } from "react"
 import "./App.css"
 import Container from "./components/Container"
-import Chat from "./components/Chat/ChatContainer"
-import ChatContainer from "./components/Chat/ChatContainer"
 
 // Redux
 import store from "./store"
@@ -19,7 +17,7 @@ const App = () => {
   return (
     <div>
       <Container />
-      <ChatContainer />
+
     </div>
   )
 }

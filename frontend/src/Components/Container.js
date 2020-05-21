@@ -4,9 +4,10 @@ import { withRouter } from "react-router";
 import Header from "./NavBar/Header";
 //import WeekContainer from "./Weather/WeekContainer";
 //import Navbar from "./NavBar/Navbar";
-import Cards from "./Cards/Cards";
+import Home from "./Home/Home";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
+import ChatContainer from "./Chat/ChatContainer";
 
 class Container extends Component {
   constructor(props) {
@@ -20,16 +21,15 @@ class Container extends Component {
   }
 
   async componentDidMount() {
-      this.setState({ });
-    }
-  
+    this.setState({});
+  }
 
   render() {
     return (
       <>
         <Header
-          // currentUser={this.state.currentUser}
-          // handleLogout={this.handleLogout}
+        // currentUser={this.state.currentUser}
+        // handleLogout={this.handleLogout}
         />
         <Switch>
           <Route
@@ -43,6 +43,7 @@ class Container extends Component {
               />
             )}
           />
+
           <Route
             exact
             path="/updatepassword"
@@ -54,7 +55,9 @@ class Container extends Component {
               />
             )}
           />
-          <Route exact path="/home" render={() => <Cards />} />
+          <Route exact path="/home" render={() => <Home />} />
+
+          <Route exact path="/announcements" render={() => <ChatContainer />} />
         </Switch>
       </>
     );
