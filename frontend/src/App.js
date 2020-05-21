@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react"
 import "./App.css"
 import Container from "./components/Container"
@@ -23,4 +24,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
