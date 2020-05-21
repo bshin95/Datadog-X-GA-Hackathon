@@ -1,14 +1,15 @@
-const bcrypt = require("bcrypt")
+// const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const mongoose = require("mongoose")
 const db = require("../db")
 
-const User = require("../models/user")
+const User = require("../models/Users")
 const Profile = require("../models/profiles")
 
 const Fact = require("../models/facts")
 
-db.on("error", console.error.bind(console, "MongoDB connection error:"))
+// console.log(db)
+// db.on("error", console.error.bind(console, "MongoDB connection error:"))
 
 //create user profile
 //save user profile
@@ -49,12 +50,21 @@ const createFacts = async (req, res) => {
     const user = await User.findById(req.params.user_id)
     const fact = await new Fact(req.body)
     await fact.save()
-    await user.fact.push(fact.id)
-    await user.save()
+    // await user.fact.push(fact.id)
+    // await user.save()
     console.log(user)
     return res.status(201).json(fact)
   } catch (error) {
     return res.status(500).json({ error: error.message })
+  }
+}
+
+const getAllFacts = async (req, res) => {
+  try {
+    const facts = await Fact.find()
+    return res.status(200).json({ facts })
+  } catch (error) {
+    return res.status(500).send(error.message)
   }
 }
 
@@ -90,4 +100,5 @@ module.exports = {
   createFacts,
   getFactsFromUser,
   getFactByUserId,
+  getAllFacts,
 }
