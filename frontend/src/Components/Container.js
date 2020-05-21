@@ -4,10 +4,9 @@ import { withRouter } from "react-router";
 import Header from "./NavBar/Header";
 //import WeekContainer from "./Weather/WeekContainer";
 //import Navbar from "./NavBar/Navbar";
-//import Cards from "./Cards/Cards";
+import Cards from "./Cards/Cards";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
-import MainPage from './MainPage/MainPage'
 
 class Container extends Component {
   constructor(props) {
@@ -55,7 +54,7 @@ class Container extends Component {
               />
             )}
           />
-          <Route exact path="/home" render={() => <MainPage />} />
+          <Route exact path="/home" render={() => <Cards />} />
         </Switch>
       </>
     );
