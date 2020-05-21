@@ -1,9 +1,13 @@
 import React from "react"
-// import apiConfig from "../apiKeys"
-
-// const apiConfig = `80bb87f8fbac9706c1f23b9ee85046c9`
+import DayCard from "./DayCard"
+// import apiConfig from "./apiKeys"
 
 class WeekContainer extends React.Component {
+  state = {
+    fullData: [],
+    dailyData: [],
+  }
+
   componentDidMount = () => {
     const weatherURL = `http://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=80bb87f8fbac9706c1f23b9ee85046c9`
 
@@ -23,13 +27,14 @@ class WeekContainer extends React.Component {
       })
   }
 
-  // formatDayCards = () => {
-  //   return this.state.dailyData.map((reading, index) => (
-  //     <DayCard reading={reading} key={index} />
-  //   ))
-  // }
+  formatDayCards = () => {
+    return this.state.dailyData.map((reading, index) => (
+      <DayCard reading={reading} key={index} />
+    ))
+  }
 
   render() {
+    // return <div>{this.formatDayCards()}</div>
     // const weatherURL = `http://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=80bb87f8fbac9706c1f23b9ee85046c9`
 
     return (
