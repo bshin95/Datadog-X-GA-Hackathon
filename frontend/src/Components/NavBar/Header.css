@@ -1,0 +1,23 @@
+/*------------HEADER---------*/
+.logo {
+  width: 3%;
+}
+
+.nav {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  border-bottom: white;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(126, 144, 219),
+    rgb(234, 115, 118)
+  );
+  height: fit-content;
+}
