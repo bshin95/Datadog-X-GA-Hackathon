@@ -1,12 +1,11 @@
-const mongoose = require("mongoose")
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const User = new Schema(
+const Profile = new Schema(
   {
-    
-    user_id: { type: mongoose.Schema.Types.ObjectId, ref: "users" }
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
   },
   { timestamps: true }
-)
+);
 
-module.exports = mongoose.model("users", User)
+module.exports = mongoose.model("profiles", Profile);

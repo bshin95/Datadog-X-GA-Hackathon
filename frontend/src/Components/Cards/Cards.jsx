@@ -1,10 +1,13 @@
-import React from "react";
+import React from "./node_modules/react";
 // import Grid from "react-css-grid";
-import "../Cards/Cards.css";
-
+import "./Cards.css";
+import Search from "../Search/Search"
 class Cards extends React.Component {
   render() {
     return (
+<>
+        <Search />
+        
       <div className='gridContainer'>
         <div className='gridCard'>
           <div>Column</div>
@@ -15,6 +18,7 @@ class Cards extends React.Component {
           <div>Column</div>
         </div>
       </div>
+      </>
     );
   }
 }
