@@ -3,12 +3,15 @@ import "./App.css"
 
 // import WeekContainer from "./components/Weather/WeekContainer"
 import Container from "./components/Container";
+import Chat from './components/Chat/ChatContainer'
+import ChatContainer from "./components/Chat/ChatContainer";
 
 function App() {
   return (
     <div className='App'>
       {/* <WeekContainer /> */}
       <Container />
+      <ChatContainer />
     </div>
   )
 }
