@@ -1,4 +1,4 @@
-import React from "react";
+import React from "./node_modules/react";
 
 class Search extends React.Component {
   constructor(props) {
@@ -6,9 +6,7 @@ class Search extends React.Component {
 
     this.state = {
       query: "",
-      results: {},
-      loading: false,
-      message: "",
+      users: []
     };
   }
   render() {

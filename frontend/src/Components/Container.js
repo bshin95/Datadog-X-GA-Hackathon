@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import { withRouter } from "react-router";
+import React, { Component } from "./node_modules/react";
+import { Route, Switch } from "./node_modules/react-router-dom";
+import { withRouter } from "./node_modules/react-router";
 import Header from "./NavBar/Header";
 //import WeekContainer from "./Weather/WeekContainer";
 //import Navbar from "./NavBar/Navbar";

@@ -1,6 +1,6 @@
-import React from "react";
+import React from "./node_modules/react";
 // import Grid from "react-css-grid";
-import "../Cards/Cards.css";
+import "./Cards.css";
 import Search from "../Search/Search"
 class Cards extends React.Component {
   render() {
