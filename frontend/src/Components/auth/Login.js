@@ -1,75 +1,56 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { login } from "../../actions/auth";
 
-const Login = (props) => {
-  // const [formData, setFormData] = useState({
-  //   email: "",
-  //   password: "",
-  // });
+const Login = ({ login, isAuthenticated }) => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-  // const { email, password } = formData;
-  // const onChange = (e) =>
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  const { email, password } = formData;
 
-  //   const onSubmit = async (e) => {
-  //     e.preventDefault();
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  //       const getUser = {
-  //         email,
-  //         password
-  //       };
-  
-  //       try {
-  //         const config = {
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         };
-  
-  //         const body = JSON.stringify(getUser);
-  
-  //         const res = await axios.post("/api/users", body, config);
-  //         console.log(res.data);
-  //       } catch (err) {
-  //         console.error(err.response.data);
-  //       }
-  //     }
-    
-          
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    login(email, password);
+  };
 
-  
+  if (isAuthenticated) {
+    return <Redirect to="/home" />;
+  }
+
   return (
     <div className="loginPage">
       <h1 className="screenHeader">Login</h1>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          props.handleLogin();
-        }}
-      >
+      <form onSubmit={onSubmit}>
         <input
+          type="email"
+          placeholder="Email Address"
           name="email"
-          placeholder="Enter Email"
-          type="text"
-          value={props.formData.email}
-          onChange={props.handleChange}
+          value={email}
+          onChange={onChange}
+          required
         />
         <br />
         <input
-          name="password"
-          placeholder="Enter Password"
           type="password"
-          value={props.formData.password}
-          onChange={props.handleChange}
+          placeholder="Password"
+          name="password"
+          value={password}
+          onChange={onChange}
+          minLength="6"
         />
         <br />
-        <Link to="/Register" className="goToRegisterPage">
-          {" "}
+        <Link to="/updatepassword" className="goToRegisterPage">
           Forgot Password?
         </Link>
         <br />
-        <button className="loginButton">Login</button>
-        <br />
+        <input type="submit" className="loginButton" value="Login" />
       </form>
       <p>Don't have an account? CONTACT HUMAN RESOURCES</p>
       <p className="question">?</p>
@@ -77,4 +58,13 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
+};
+
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+export default connect(mapStateToProps, { login })(Login);

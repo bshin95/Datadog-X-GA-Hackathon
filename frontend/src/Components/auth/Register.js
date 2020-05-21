@@ -44,7 +44,7 @@ const Register = () => {
 
   return (
     <div className="loginPage">
-      THIS PAGE IS NOT FINISHED AND MAY NEED TO BE CONVERTED TO UPDATE PASSWORD
+      NEEDS TO BE CONVERTED TO UPDATE PASSWORD
       <h1 className="screenHeader">Update Password</h1>
       <form onSubmit={(e) => onSubmit(e)}>
         <div>
@@ -93,11 +93,11 @@ const Register = () => {
             required
           />
         </div>
-        <Link to="/login" className="goToRegisterPage">
+        <Link to="/" className="goToRegisterPage">
           Already have an account? Login
         </Link>
         <br />
-        <input className="loginButton" type="submit" value="Register" />
+        <input className="loginButton" type="submit" value="Update" />
       </form>
     </div>
   );

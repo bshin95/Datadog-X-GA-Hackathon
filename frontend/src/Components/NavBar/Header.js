@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "./Navbar";
+import WeekContainer from "../Weather/WeekContainer";
 
 const Header = (props) => (
   <header>
-    <Navbar currentUser={props.currentUser} handleLogout={props.handleLogout} />
-    <div className="main">{props.children}</div>
+    <Navbar />
+    {/* <WeekContainer /> */}
   </header>
 );
 
