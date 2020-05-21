@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import Header from "./NavBar/Header";
+//import WeekContainer from "./Weather/WeekContainer";
+//import Navbar from "./NavBar/Navbar";
+//import Cards from "./Cards/Cards";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import MainPage from './MainPage/MainPage'
