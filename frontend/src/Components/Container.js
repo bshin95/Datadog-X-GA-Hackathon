@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import WeekContainer from "./Weather/WeekContainer";
 import Navbar from "./NavBar/Navbar";
+import Cards from "./Cards/Cards";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import Landing from './LandingPage/Landing'
@@ -20,9 +21,9 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <div>Social Network</div>
         <Navbar />
-        <section className="container">
+        <Cards />
+        <section className='container'>
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />

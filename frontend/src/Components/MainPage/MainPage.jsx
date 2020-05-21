@@ -1,7 +1,8 @@
 import React from "react";
 
+const MainPage = () => {
 
-//this component will have the subscription tiles
-export const MainPage = () => {
   return <div></div>;
 };
+
+export default MainPage;
