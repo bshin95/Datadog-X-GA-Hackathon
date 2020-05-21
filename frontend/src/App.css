@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,82 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.goToRegisterPage {
+  text-decoration: none;
+  color: black;
+  font-size: x-small;
+}
+
+/*------------LOGIN/LANDING--------*/
+
+.screenHeader {
+  margin: 0em auto;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+.loginPage {
+  display: flexbox;
+  text-align: center;
+  background-color: rgb(215, 221, 234);
+  min-height: 120vh;
+  margin: auto;
+  background-image: url("./img/pawprint.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* opacity: .5; */
+}
+
+input {
+  margin: 0.5em auto;
+  width: 40%;
+  height: 2em;
+  text-align: center;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.question {
+  border-radius: 50%;
+  background-color: rgb(208, 208, 208);
+  width: 1em;
+  text-align: center;
+  border: 0.1em solid black;
+  margin: auto;
+}
+
+.loginButton {
+  background-color: rgb(234, 115, 118);
+  color: white;
+  height: 3em;
+  width: fit-content;
+  border-radius: 2%;
+  margin: 2em auto;
+  font-size: 1em;
+}
+
+/*------------HEADER---------*/
+.logo {
+  width: 4%;
+}
+
+.nav {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+
+}
+
+header {
+  border-bottom: white;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(126, 144, 219),
+    rgb(234, 115, 118)
+  );
+  height: fit-content;
 }
