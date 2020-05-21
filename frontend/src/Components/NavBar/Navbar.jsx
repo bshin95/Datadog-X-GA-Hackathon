@@ -1,24 +1,26 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   return (
-    <Router>
-      <ul>
-        <div className='row'>
-          <img src='' alt='Datadog logo' class='logo'></img>
+    <div className="nav">
+      <img src="logo_vertical_white.png" alt="Datadog logo" class="logo"></img>
+      {props.currentUser ? (
+        <nav className="row">
+          <NavLink to="/Home">Home</NavLink>
+          <NavLink to="/Search">Search</NavLink>
+          <NavLink to="/Profile">Profile</NavLink>
+        </nav>
+      ) : null}
+
+      {props.currentUser ? (
+        <div>
+          <button className="signOut" onClick={props.handleLogout}>
+            Sign Out
+          </button>
         </div>
-        <li>
-          <Link to='/Home'>Home</Link>
-        </li>
-        <li>
-          <Link to='/Search'>Search</Link>
-        </li>
-        <li>
-          <Link to='/Profile'>Profile</Link>
-        </li>
-      </ul>
-    </Router>
+      ) : null}
+    </div>
   );
 };
 

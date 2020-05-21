@@ -1,51 +1,79 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-const Login = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
 
-  const { email, password } = formData;
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+const Login = (props) => {
+  // const [formData, setFormData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    console.log("SUCCESS");
-  };
+  // const { email, password } = formData;
+  // const onChange = (e) =>
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
 
+  //   const onSubmit = async (e) => {
+  //     e.preventDefault();
+
+  //       const getUser = {
+  //         email,
+  //         password
+  //       };
+  
+  //       try {
+  //         const config = {
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //         };
+  
+  //         const body = JSON.stringify(getUser);
+  
+  //         const res = await axios.post("/api/users", body, config);
+  //         console.log(res.data);
+  //       } catch (err) {
+  //         console.error(err.response.data);
+  //       }
+  //     }
+    
+          
+
+  
   return (
-    <>
-      <h1>Login</h1>
-      <form onSubmit={(e) => onSubmit(e)}>
-        <div>
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            value={email}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            minLength="6"
-            value={password}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <input type="submit" value="Login" />
+    <div className="loginPage">
+      <h1 className="screenHeader">Login</h1>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          props.handleLogin();
+        }}
+      >
+        <input
+          name="email"
+          placeholder="Enter Email"
+          type="text"
+          value={props.formData.email}
+          onChange={props.handleChange}
+        />
+        <br />
+        <input
+          name="password"
+          placeholder="Enter Password"
+          type="password"
+          value={props.formData.password}
+          onChange={props.handleChange}
+        />
+        <br />
+        <Link to="/Register" className="goToRegisterPage">
+          {" "}
+          Forgot Password?
+        </Link>
+        <br />
+        <button className="loginButton">Login</button>
+        <br />
       </form>
-      <p>
-        Don't have an account? <Link to="/register">Sign Up </Link>
-      </p>
-    </>
+      <p>Don't have an account? CONTACT HUMAN RESOURCES</p>
+      <p className="question">?</p>
+    </div>
   );
 };
 

@@ -1,16 +1,12 @@
 import React from "react";
 import "./App.css";
-
-// import WeekContainer from "./components/Weather/WeekContainer"
 import Container from "./components/Container";
 
-function App() {
-  return (
-    <div className='App'>
+const App = () => (
+    <>
       <Container />
-    </div>
-  );
-}
+    </>
+);
 
 export default App;
 
