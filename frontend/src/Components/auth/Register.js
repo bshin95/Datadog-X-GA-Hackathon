@@ -7,11 +7,15 @@ const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
+    department: "",
+    hierarchy: "",
+    location:"",
     password: "",
     password2: "",
   });
 
-  const { name, email, password, password2 } = formData;
+  const { name, email, phone, department, hierarchy, location, password, password2 } = formData;
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -23,6 +27,10 @@ const Register = () => {
       const newUser = {
         name,
         email,
+        phone,
+        department,
+        hierarchy,
+        location,
         password,
       };
 
@@ -45,8 +53,7 @@ const Register = () => {
 
   return (
     <div className="loginPage">
-      NEEDS TO BE CONVERTED TO UPDATE PASSWORD
-      <h1 className="screenHeader">Update Password</h1>
+      <h1 className="screenHeader">Register</h1>
       <form onSubmit={(e) => onSubmit(e)}>
         <div>
           <input
@@ -71,6 +78,46 @@ const Register = () => {
             This site uses Gravatar so if you want a profile image, use a
             Gravatar email
           </small> */}
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter Phone Number"
+            name="phone"
+            value={phone}
+            onChange={(e) => onChange(e)}
+            required
+          />
+        </div>
+        <div>
+        <input
+            type="text"
+            placeholder="Enter Department"
+            name="department"
+            value={department}
+            onChange={(e) => onChange(e)}
+            required
+          />
+        </div>
+        <div>
+        <input
+            type="text"
+            placeholder="Enter Hierarchy"
+            name="hierarchy"
+            value={hierarchy}
+            onChange={(e) => onChange(e)}
+            required
+          />
+        </div>
+        <div>
+        <input
+            type="text"
+            placeholder="Enter Office Location"
+            name="location"
+            value={location}
+            onChange={(e) => onChange(e)}
+            required
+          />
         </div>
         <div>
           <input

@@ -46,7 +46,7 @@ class Container extends Component {
 
           <Route
             exact
-            path="/updatepassword"
+            path="/register"
             render={() => (
               <Register
                 handleRegister={this.handleRegister}
