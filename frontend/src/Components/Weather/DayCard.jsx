@@ -1,5 +1,5 @@
-import React from "react"
-var moment = require("moment")
+import React from "./node_modules/react"
+var moment = require("./node_modules/moment")
 
 const DayCard = ({ reading }) => {
   let newDate = new Date()

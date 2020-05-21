@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import React, { useState } from "./node_modules/react";
+import axios from "./node_modules/axios";
+import { Link } from "./node_modules/react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({

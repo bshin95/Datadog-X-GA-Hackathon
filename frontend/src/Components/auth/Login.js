@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React, { useState } from "./node_modules/react";
+import { Link, Redirect } from "./node_modules/react-router-dom";
+import { connect } from "./node_modules/react-redux";
+import PropTypes from "./node_modules/prop-types";
 import { login } from "../../actions/auth";
 
 const Login = ({ login, isAuthenticated }) => {
