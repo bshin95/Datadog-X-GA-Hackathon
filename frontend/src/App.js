@@ -1,7 +1,6 @@
-
 import React, { useEffect } from "react"
 import "./App.css"
-import Container from "./components/Container"
+import Container from "../src/Components/Container"
 
 // Redux
 import store from "./store"
@@ -17,9 +16,8 @@ const App = () => {
   return (
     <div>
       <Container />
-
     </div>
   )
 }
 
-export default App;
+export default App

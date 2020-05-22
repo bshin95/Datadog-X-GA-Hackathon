@@ -1,19 +1,22 @@
-import React from "react";
+import React from "react"
+import styled from "styled-components"
 
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
+const SearchContainer = styled.div`
+  padding: 2rem;
+`
 
-    this.state = {
-      query: "",
-      results: {},
-      loading: false,
-      message: "",
-    };
-  }
-  render() {
-    return <div className="searchContainer"></div>;
-  }
-}
+const SearchBar = styled.input`
+  width: 800px;
+  text-align: left;
+`
 
-export default Search;
+const SearchInput = ({ onChange }) => (
+  <SearchContainer>
+    <SearchBar
+      placeholder="Please search for an employee"
+      onChange={onChange}
+    />
+  </SearchContainer>
+)
+
+export default SearchInput

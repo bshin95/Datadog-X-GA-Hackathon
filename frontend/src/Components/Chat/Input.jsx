@@ -23,9 +23,9 @@ class Input extends Component {
           <input
             onChange={(e) => this.onChange(e)}
             value={this.state.text}
-            type='text'
-            placeholder='Enter your message and press ENTER'
-            autofocus='true'
+            type="text"
+            placeholder="Enter your message and press ENTER"
+            autoFocus={true}
           />
           <button>Send</button>
         </form>

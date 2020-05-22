@@ -1,19 +1,21 @@
 .gridContainer {
   display: flex;
   justify-content: center;
-  /* width: 50%; */
+  text-align: center;
+  background-color: rgb(215, 221, 234);
+  background-image: url("/pawprint.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 
 .gridCard {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* justify-items: center; */
+  margin: auto;
   align-content: center;
-  /* place-items: center; */
-  /* grid-gap: 2em; */
   grid-gap: 50px;
-  /* grid-auto-flow: column; */
-  /* grid-template-columns: 186px 186px 186px 186px; */
 }
 
 .gridCard > * {
