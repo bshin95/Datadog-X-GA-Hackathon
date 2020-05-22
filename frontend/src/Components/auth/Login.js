@@ -47,7 +47,7 @@ const Login = ({ login, isAuthenticated }) => {
           minLength="6"
         />
         <br />
-        <Link to="/updatepassword" className="goToRegisterPage">
+        <Link to="/updateprofile" className="goToRegisterPage">
           Forgot Password?
         </Link>
         <br />
