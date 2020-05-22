@@ -45,15 +45,32 @@
 }
 
 /*------------SUBSCRIPTION PAGE------- */
+
+.myhrdata {
+  font-size: 0.75em;
+  text-align: left;
+  margin-left: 2em;
+  font-weight: bold;
+}
+
+.myhrdataheader {
+  background-color: rgb(215, 221, 234);
+}
+
 ul {
   list-style-type: circle;
   text-align: left;
+  list-style-position: inside;
+}
+
+.passwordupdatepage {
+  background-color: rgba(255, 0, 0, 0.187);
 }
 
 .subscriptionheader {
   text-align: left;
   font-weight: bold;
-  margin-top: 2em;
+  margin-top: 0.5em;
   margin-bottom: 0em;
 }
 
@@ -66,4 +83,78 @@ ul {
 
 .subscritioninputs {
   display: flexbox;
+}
+
+.inputboxsubs {
+  height: 1em;
+  margin-bottom: 0em;
+  /* width: 30em; */
+}
+
+.updateButton {
+  background-color: rgb(234, 115, 118);
+  color: white;
+  height: 2.5em;
+  width: 7em;
+  border-radius: 13%;
+  margin: 2em auto auto 10em;
+  font-size: 1em;
+}
+
+.uploadpic {
+  font-size: 0.75em;
+  margin-top: 0em;
+}
+
+.socialmedia {
+  text-align: left;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-github {
+  background: black;
+  color: white;
 }
