@@ -1,17 +1,9 @@
-import React from "react";
+import React from "react"
 
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
+const SearchInput = ({ onChange }) => (
+  <div>
+    <input onChange={onChange} />
+  </div>
+)
 
-    this.state = {
-      query: "",
-      results: {},
-      loading: false,
-      message: "",
-    };
-  }
-  render() {
-    return <div className='searchContainer'></div>;
-  }
-}
+export default SearchInput

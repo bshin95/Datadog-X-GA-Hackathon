@@ -7,6 +7,7 @@ const config = require("config")
 const { check, validationResult } = require("express-validator")
 //
 const User = require("../../models/Users")
+const controllers = require("../../controllers")
 
 router.post(
   "/",
@@ -83,5 +84,9 @@ router.post(
     // console.log(req.body); used to test routes
   }
 )
+
+router.get("/", controllers.getAllUsers)
+
+router.get("/:id", controllers.getUser)
 
 module.exports = router

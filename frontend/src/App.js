@@ -1,9 +1,8 @@
-
 import React, { useEffect } from "react"
 import "./App.css"
 import Container from "./components/Container"
-import Chat from "./components/Chat/ChatContainer"
 import ChatContainer from "./components/Chat/ChatContainer"
+import Form from "./components/InterestForm/Form"
 
 // Redux
 import store from "./store"
@@ -20,8 +19,9 @@ const App = () => {
     <div>
       <Container />
       <ChatContainer />
+      <Form />
     </div>
   )
 }
 
-export default App;
+export default App
