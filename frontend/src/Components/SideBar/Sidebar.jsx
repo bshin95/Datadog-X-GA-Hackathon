@@ -11,6 +11,7 @@ import LoggedInUser from "./LoggedInUser"
 const SidebarContainer = styled.div`
   height: 100%;
   width: 100%;
+  max-width: 100%;
   background-color: #d7dbeb;
 `
 
