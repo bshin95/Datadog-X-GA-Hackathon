@@ -1,18 +1,12 @@
 import React from "react";
-// import Grid from "react-css-grid";
 import "./Home.css";
 import Search from "../Search/Search";
 import { Link } from "react-router-dom";
-// import { StoriesContainer } from "../News/StoriesContainer";
 
 class Home extends React.Component {
   render() {
     return (
       <>
-        {/* <Search /> */}
-
-        {/* <StoriesContainer /> */}
-
         <div className="gridContainer">
           <div className="gridCard">
             <div>
@@ -86,14 +80,3 @@ class Home extends React.Component {
 }
 
 export default Home;
-
-// <div className='Grid-Cards'>
-//   <Grid width={320} gap={24}>
-//     <div>Column</div>
-//     <div>Column</div>
-//     <div>Column</div>
-//     <div>Column</div>
-//     <div>Column</div>
-//     <div>Column</div>
-//   </Grid>
-// </div>

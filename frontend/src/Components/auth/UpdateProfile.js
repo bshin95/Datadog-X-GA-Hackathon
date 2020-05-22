@@ -79,12 +79,7 @@ const UpdateProfile = () => {
     } else {
       const updateUser = {
         //was newUser change to update to make a put update
-        // name,
         email,
-        // phone,
-        // department,
-        // hierarchy,
-        // location,
         interest_one,
         interest_one_image,
 
@@ -128,11 +123,30 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="loginPage">
-      <h1 className="screenHeader">Update My Profile</h1>
-
+    <div className="updatePage">
+      <div className="myhrdataheader">
+        <p className="myhrdata">Sophie Johnson</p>
+        <p className="myhrdata">SophieJohnson2020@gmail.com</p>
+        <p className="myhrdata">123-456-7890</p>
+        <p className="myhrdata">IT</p>
+        <p className="myhrdata">Associate</p>
+        <p className="myhrdata">NYC</p>
+      </div>
+      {/* <h1 className="screenHeader">Update My Profile</h1> */}
+      {/* input below is just for demo */}
+      <div className="subscritioninputs">
+        <input
+          className="passwordupdatepage inputboxsubs"
+          placeholder="Enter Password"
+        />
+        <br />
+        <input
+          className="inputboxsubs"
+          placeholder="Language(s)"
+        />
+      </div>
       <div className="subscriptions">
-        <h2>Subscriptions</h2>
+        <h1 className="subscriptionheader">Subscriptions</h1>
         <ul>
           <li>DATA DOG</li>
           <li>NEWS</li>
@@ -143,11 +157,11 @@ const UpdateProfile = () => {
         </ul>
       </div>
 
-      <h2>About Me! (voluntary) </h2>
+      <h1 className="subscriptionheader">About Me! (voluntary) </h1>
 
       <form onSubmit={(e) => onSubmit(e)}>
         <div>
-          <input
+          {/* <input
             type="email"
             placeholder="Enter Email"
             name="email"
@@ -177,173 +191,262 @@ const UpdateProfile = () => {
             value={password2}
             onChange={(e) => onChange(e)}
             required
-          />
+          />*/}
         </div>
 
-        <div>
-          <input
-            type="text"
-            placeholder="Enter Fun Fact 1"
-            name="interest_one"
-            value={interest_one}
-            onChange={(e) => onChange(e)}
-            required
-          />
-
-          <input
+        <div className="subscritioninputs">
+          <div>
+            <input
+              className="inputboxsubs"
+              type="text"
+              placeholder="Enter Fun Fact 1"
+              name="interest_one"
+              value={interest_one}
+              onChange={(e) => onChange(e)}
+              required
+            />
+            <p className="uploadpic">
+              Drag and drop or paste image here to upload You can also browse
+              from your computer
+            </p>
+            {/* <input
             type="text"
             placeholder="Enter Fun Fact images 1"
             name="interest_one_image"
             value={interest_one_image}
             onChange={(e) => onChange(e)}
             required
-          />
-        </div>
+          /> */}
+          </div>
 
-        <div>
-          <input
-            type="text"
-            placeholder="Enter Fun Fact 2"
-            name="interest_two"
-            value={interest_two}
-            onChange={(e) => onChange(e)}
-            required
-          />
-
-          <input
+          <div>
+            <input
+              className="inputboxsubs"
+              type="text"
+              placeholder="Enter Fun Fact 2"
+              name="interest_two"
+              value={interest_two}
+              onChange={(e) => onChange(e)}
+              required
+            />
+            <p className="uploadpic">
+              Drag and drop or paste image here to upload You can also browse
+              from your computer
+            </p>
+            {/* <input
             type="text"
             placeholder="Enter Fun Fact Image 2"
             name="interest_two_image"
             value={interest_two_image}
             onChange={(e) => onChange(e)}
             required
-          />
-        </div>
+          /> */}
+          </div>
 
-        <div>
-          <input
-            type="text"
-            placeholder="Enter Fun Fact 3"
-            name="interest_three"
-            value={interest_three}
-            onChange={(e) => onChange(e)}
-            required
-          />
+          <div>
+            <input
+              className="inputboxsubs"
+              type="text"
+              placeholder="Enter Fun Fact 3"
+              name="interest_three"
+              value={interest_three}
+              onChange={(e) => onChange(e)}
+              required
+            />
+            <p className="uploadpic">
+              Drag and drop or paste image here to upload You can also browse
+              from your computer
+            </p>
 
-          <input
+            {/* <input
             type="text"
             placeholder="Enter Fun Fact 3"
             name="interest_three_image"
             value={interest_three_image}
             onChange={(e) => onChange(e)}
             required
-          />
-        </div>
+          /> */}
+          </div>
 
-        <div>
-          <input
-            type="text"
-            placeholder="Enter Fun Fact 4"
-            name="interest_four"
-            value={interest_four}
-            onChange={(e) => onChange(e)}
-            required
-          />
-
-          <input
+          <div>
+            <input
+              className="inputboxsubs"
+              type="text"
+              placeholder="Enter Fun Fact 4"
+              name="interest_four"
+              value={interest_four}
+              onChange={(e) => onChange(e)}
+              required
+            />
+            <p className="uploadpic">
+              Drag and drop or paste image here to upload You can also browse
+              from your computer
+            </p>
+            {/* <input
             type="text"
             placeholder="Enter Fun Fact Image 4"
             name="interest_four_image"
             value={interest_four_image}
             onChange={(e) => onChange(e)}
             required
-          />
-        </div>
+          /> */}
+          </div>
 
-        <div>
-          <input
-            type="text"
-            placeholder="Enter Fun Fact 5"
-            name="interest_five"
-            value={interest_five}
-            onChange={(e) => onChange(e)}
-            required
-          />
-
-          <input
+          <div>
+            <input
+              className="inputboxsubs"
+              type="text"
+              placeholder="Enter Fun Fact 5"
+              name="interest_five"
+              value={interest_five}
+              onChange={(e) => onChange(e)}
+              required
+            />
+            <p className="uploadpic">
+              Drag and drop or paste image here to upload You can also browse
+              from your computer
+            </p>
+            {/* <input
             type="text"
             placeholder="Enter Fun Fact Image 5"
             name="interest_five_image"
             value={interest_five_image}
             onChange={(e) => onChange(e)}
             required
-          />
-        </div>
-        <h2>Connect With Me!</h2>
-        <h3>Interests, accomplishments, pets, classifieds etc.</h3>
-        <div>
-          <input
-            type="text"
-            placeholder="Enter Facebook URL"
-            name="facebook_url"
-            value={facebook_url}
-            onChange={(e) => onChange(e)}
-            required
-          />
+          /> */}
+          </div>
+          <h2 className="subscriptionheader">Connect With Me!</h2>
+          <h3 className="subscriptionheaderdetails">
+            Interests, accomplishments, pets, classifieds etc.
+          </h3>
 
-          <input
-            type="text"
-            placeholder="Enter Instagram URL"
-            name="instagram_url"
-            value={instagram_url}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            placeholder="Enter Twitter URL"
-            name="twitter_url"
-            value={twitter_url}
-            onChange={(e) => onChange(e)}
-            required
-          />
+          <div className="socialmedia">
+            <a
+              href="https://www.instagram.com/transitiontotechlife/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fa fa-facebook"
+            >
+              {" "}
+            </a>
 
-          <input
-            type="text"
-            placeholder="Enter LinkedIn URL"
-            name="linkedin_url"
-            value={linkedin_url}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            placeholder="Enter YouTube URL"
-            name="youtube_url"
-            value={youtube_url}
-            onChange={(e) => onChange(e)}
-            required
-          />
+            <a
+              href="https://www.instagram.com/transitiontotechlife/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fa fa-instagram"
+            >
+              {" "}
+            </a>
 
-          <input
-            type="text"
-            placeholder="Enter Pinterest URL"
-            name="pinterest_url"
-            value={pinterest_url}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
+            <a
+              href="https://www.instagram.com/transitiontotechlife/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fa fa-twitter"
+            >
+              {" "}
+            </a>
 
+            <a
+              href="https://linkedin.com/in/reginaclarke/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fa fa-linkedin"
+            >
+              {" "}
+            </a>
+
+            <a
+              href="https://www.instagram.com/transitiontotechlife/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fa fa-youtube"
+            >
+              {" "}
+            </a>
+
+            <a
+              href="https://www.instagram.com/transitiontotechlife/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fa fa-pinterest"
+            >
+              {" "}
+            </a>
+            <a
+              href="https://github.com/ReginaClarke"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fa fa-github"
+            >
+              {" "}
+            </a>
+            <input className="updateButton" type="submit" value="Submit" />
+          </div>
+          {/* <div> 
+            <input
+              type="text"
+              placeholder="Enter Facebook URL"
+              name="facebook_url"
+              value={facebook_url}
+              onChange={(e) => onChange(e)}
+              required
+            />
+
+            <input
+              type="text"
+              placeholder="Enter Instagram URL"
+              name="instagram_url"
+              value={instagram_url}
+              onChange={(e) => onChange(e)}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter Twitter URL"
+              name="twitter_url"
+              value={twitter_url}
+              onChange={(e) => onChange(e)}
+              required
+            />
+
+            <input
+              type="text"
+              placeholder="Enter LinkedIn URL"
+              name="linkedin_url"
+              value={linkedin_url}
+              onChange={(e) => onChange(e)}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter YouTube URL"
+              name="youtube_url"
+              value={youtube_url}
+              onChange={(e) => onChange(e)}
+              required
+            />
+
+            <input
+              type="text"
+              placeholder="Enter Pinterest URL"
+              name="pinterest_url"
+              value={pinterest_url}
+              onChange={(e) => onChange(e)}
+              required
+            />
+          </div> */}
+        </div>
         {/* <Link to="/" className="goToRegisterPage">
           Already have an account? Login
         </Link>
         <br /> */}
-        <input className="loginButton" type="submit" value="Update" />
+        {/* <input className="loginButton" type="submit" value="Submit" /> */}
       </form>
     </div>
   );
