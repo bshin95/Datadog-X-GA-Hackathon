@@ -145,7 +145,7 @@ const Register = () => {
           Already have an account? Login
         </Link>
         <br />
-        <input className="loginButton" type="submit" value="Update" />
+        <input className="loginButton" type="submit" value="Register" />
       </form>
     </div>
   );
