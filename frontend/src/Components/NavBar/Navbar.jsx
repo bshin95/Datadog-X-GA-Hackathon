@@ -13,7 +13,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <nav className="row">
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/search">Search</NavLink>
-        <NavLink to="/profile">Profile</NavLink>
+        <NavLink to="/updateprofile">Profile</NavLink>
       </nav>
       <div>
         <Link onClick={logout} to="#!">

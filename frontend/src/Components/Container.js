@@ -3,20 +3,17 @@ import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import Header from "./NavBar/Header";
 //import WeekContainer from "./Weather/WeekContainer";
-//import Navbar from "./NavBar/Navbar";
 import Home from "./Home/Home";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ChatContainer from "./Chat/ChatContainer";
+import UpdateProfile from './auth/UpdateProfile'
 
 class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
       currentUser: null,
-      // authFormData: {
-      //   username: "",
-      //   password: "",
     };
   }
 
@@ -27,10 +24,7 @@ class Container extends Component {
   render() {
     return (
       <>
-        <Header
-        // currentUser={this.state.currentUser}
-        // handleLogout={this.handleLogout}
-        />
+        <Header/>
         <Switch>
           <Route
             exact
@@ -56,6 +50,7 @@ class Container extends Component {
             )}
           />
           <Route exact path="/home" render={() => <Home />} />
+          <Route exact path="/updateprofile" render={() => <UpdateProfile />} />
 
           <Route exact path="/announcements" render={() => <ChatContainer />} />
         </Switch>
