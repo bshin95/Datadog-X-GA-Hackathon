@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React from "./node_modules/react";
+import { NavLink, Link } from "./node_modules/react-router-dom";
+import { connect } from "./node_modules/react-redux";
+import PropTypes from "./node_modules/prop-types";
 import { logout } from "../../actions/auth";
 import "./Header.css";
 
