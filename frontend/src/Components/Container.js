@@ -9,15 +9,15 @@ import UsersContainer from "./UserContainer/UsersContainer"
 import UserDetails from "./UserContainer/UserDetails"
 import Home from "./Home/Home"
 import ChatContainer from "./Chat/ChatContainer"
-import UpdateProfile from './auth/UpdateProfile'
-import { StoriesContainer } from "./News/StoriesContainer";
-
+import UpdateProfile from "./auth/UpdateProfile"
+import { StoriesContainer } from "./News/StoriesContainer"
+//get the code working
 class Container extends Component {
   constructor(props) {
     super(props)
     this.state = {
       currentUser: null,
-    };
+    }
   }
 
   async componentDidMount() {
@@ -27,7 +27,7 @@ class Container extends Component {
   render() {
     return (
       <>
-        <Header/>
+        <Header />
         <Switch>
           <Route
             exact
