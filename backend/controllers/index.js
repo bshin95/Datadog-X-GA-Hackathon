@@ -42,6 +42,15 @@ const getUser = async (req, res) => {
   }
 }
 
+const getCurrentUser = async (req, res) => {
+  try {
+    const user = await User.find()
+    return res.status(200).json({ user })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 // const createFacts = async (req, res) => {
 //   console.log("creating fact about user")
 //   try {
@@ -111,4 +120,5 @@ module.exports = {
   //getFactByUserId,
   //getAllFacts,
   getUser,
+  getCurrentUser,
 }
