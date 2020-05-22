@@ -2,7 +2,7 @@ import React from "react";
 // import Grid from "react-css-grid";
 import "./Home.css";
 import Search from "../Search/Search";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { StoriesContainer } from "../News/StoriesContainer";
 
 class Home extends React.Component {
@@ -13,18 +13,19 @@ class Home extends React.Component {
 
         {/* <StoriesContainer /> */}
 
-        <div className='gridContainer'>
-          <div className='gridCard'>
+        <div className="gridContainer">
+          <div className="gridCard">
             <div>
               <img
-                src='logo_vertical_white.png'
-                alt='Datadog logo'
-                class='logo'
+                src="companylogo.png"
+                alt="company logo"
+                className="hometiles"
               ></img>
+              <p>PawPrint</p>
             </div>
-            <NavLink to='/news'>
+            <Link to="/news">
               <div>news</div>
-            </NavLink>
+            </Link>
             <div>2</div>
             <div>Column</div>
             <div>Column</div>
