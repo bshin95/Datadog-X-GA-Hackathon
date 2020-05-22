@@ -4,7 +4,6 @@ import { withRouter } from "react-router"
 import Header from "./NavBar/Header"
 //import WeekContainer from "./Weather/WeekContainer";
 //import Navbar from "./NavBar/Navbar";
-<<<<<<< HEAD
 //import Cards from "./Cards/Cards";
 import Register from "./auth/Register"
 import Login from "./auth/Login"
@@ -15,13 +14,7 @@ import Home from "./Home/Home"
 // import Register from "./auth/Register";
 // import Login from "./auth/Login";
 import ChatContainer from "./Chat/ChatContainer"
-=======
-import Home from "./Home/Home";
-import Register from "./auth/Register";
-import Login from "./auth/Login";
-import ChatContainer from "./Chat/ChatContainer";
-import { StoriesContainer } from "./News/StoriesContainer";
->>>>>>> c3a1130a470acd944b56e87d3bc415a8d1eb1044
+import { StoriesContainer } from "./News/StoriesContainer"
 
 class Container extends Component {
   constructor(props) {
@@ -48,7 +41,7 @@ class Container extends Component {
         <Switch>
           <Route
             exact
-            path='/'
+            path="/"
             render={() => (
               <Login
                 handleLogin={this.handleLogin}
@@ -74,9 +67,9 @@ class Container extends Component {
           <Route exact path="/users/:userId" component={UserDetails} />
           <Route exact path="/home" render={() => <Home />} />
 
-          <Route exact path='/announcements' render={() => <ChatContainer />} />
+          <Route exact path="/announcements" render={() => <ChatContainer />} />
 
-          <Route exact path='/news' render={() => <StoriesContainer />} />
+          <Route exact path="/news" render={() => <StoriesContainer />} />
         </Switch>
       </>
     )
