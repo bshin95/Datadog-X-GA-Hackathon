@@ -55,11 +55,13 @@
 
 .myhrdataheader {
   background-color: rgb(215, 221, 234);
+  height: 180px;
 }
 
 ul {
   list-style-type: circle;
   text-align: left;
+  margin-left: 40px;
   list-style-position: inside;
 }
 
@@ -72,17 +74,29 @@ ul {
   font-weight: bold;
   margin-top: 0.5em;
   margin-bottom: 0em;
+  margin-left: 50px;
+  padding-top: 30px;
+}
+
+.subscriptions {
+  margin-left: 10px;
+  width: 50%;
 }
 
 .subscriptionheaderdetails {
   text-align: left;
   font-weight: bold;
   margin-top: 0em;
+  margin-left: 50px;
   margin-bottom: 0em;
+  padding-top: 10px;
 }
 
 .subscritioninputs {
   display: flexbox;
+  padding-top: 20px;
+  width: 50%;
+  margin-left: 50px;
 }
 
 .inputboxsubs {

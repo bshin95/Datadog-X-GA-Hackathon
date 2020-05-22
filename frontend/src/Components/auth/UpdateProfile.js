@@ -123,30 +123,27 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="updatePage">
-      <div className="myhrdataheader">
-        <p className="myhrdata">Sophie Johnson</p>
-        <p className="myhrdata">SophieJohnson2020@gmail.com</p>
-        <p className="myhrdata">123-456-7890</p>
-        <p className="myhrdata">IT</p>
-        <p className="myhrdata">Associate</p>
-        <p className="myhrdata">NYC</p>
+    <div className='updatePage'>
+      <div className='myhrdataheader'>
+        <p className='myhrdata'>Sophie Johnson</p>
+        <p className='myhrdata'>SophieJohnson2020@gmail.com</p>
+        <p className='myhrdata'>123-456-7890</p>
+        <p className='myhrdata'>IT</p>
+        <p className='myhrdata'>Associate</p>
+        <p className='myhrdata'>NYC</p>
       </div>
       {/* <h1 className="screenHeader">Update My Profile</h1> */}
       {/* input below is just for demo */}
-      <div className="subscritioninputs">
+      <div className='subscritioninputs'>
         <input
-          className="passwordupdatepage inputboxsubs"
-          placeholder="Enter Password"
+          className='passwordupdatepage inputboxsubs'
+          placeholder='Enter Password'
         />
         <br />
-        <input
-          className="inputboxsubs"
-          placeholder="Language(s)"
-        />
+        <input className='inputboxsubs' placeholder='Language(s)' />
       </div>
-      <div className="subscriptions">
-        <h1 className="subscriptionheader">Subscriptions</h1>
+      <div className='subscriptions'>
+        <h1 className='subscriptionheader'>Subscriptions</h1>
         <ul>
           <li>DATA DOG</li>
           <li>NEWS</li>
@@ -157,7 +154,10 @@ const UpdateProfile = () => {
         </ul>
       </div>
 
-      <h1 className="subscriptionheader">About Me! (voluntary) </h1>
+      <h1 className='subscriptionheader'>About Me! (voluntary) </h1>
+      <h3 className='subscriptionheaderdetails'>
+        Interests, accomplishments, pets, classifieds etc.
+      </h3>
 
       <form onSubmit={(e) => onSubmit(e)}>
         <div>
@@ -194,18 +194,18 @@ const UpdateProfile = () => {
           />*/}
         </div>
 
-        <div className="subscritioninputs">
+        <div className='subscritioninputs'>
           <div>
             <input
-              className="inputboxsubs"
-              type="text"
-              placeholder="Enter Fun Fact 1"
-              name="interest_one"
+              className='inputboxsubs'
+              type='text'
+              placeholder='Enter Fun Fact 1'
+              name='interest_one'
               value={interest_one}
               onChange={(e) => onChange(e)}
               required
             />
-            <p className="uploadpic">
+            <p className='uploadpic'>
               Drag and drop or paste image here to upload You can also browse
               from your computer
             </p>
@@ -221,15 +221,15 @@ const UpdateProfile = () => {
 
           <div>
             <input
-              className="inputboxsubs"
-              type="text"
-              placeholder="Enter Fun Fact 2"
-              name="interest_two"
+              className='inputboxsubs'
+              type='text'
+              placeholder='Enter Fun Fact 2'
+              name='interest_two'
               value={interest_two}
               onChange={(e) => onChange(e)}
               required
             />
-            <p className="uploadpic">
+            <p className='uploadpic'>
               Drag and drop or paste image here to upload You can also browse
               from your computer
             </p>
@@ -245,15 +245,15 @@ const UpdateProfile = () => {
 
           <div>
             <input
-              className="inputboxsubs"
-              type="text"
-              placeholder="Enter Fun Fact 3"
-              name="interest_three"
+              className='inputboxsubs'
+              type='text'
+              placeholder='Enter Fun Fact 3'
+              name='interest_three'
               value={interest_three}
               onChange={(e) => onChange(e)}
               required
             />
-            <p className="uploadpic">
+            <p className='uploadpic'>
               Drag and drop or paste image here to upload You can also browse
               from your computer
             </p>
@@ -270,15 +270,15 @@ const UpdateProfile = () => {
 
           <div>
             <input
-              className="inputboxsubs"
-              type="text"
-              placeholder="Enter Fun Fact 4"
-              name="interest_four"
+              className='inputboxsubs'
+              type='text'
+              placeholder='Enter Fun Fact 4'
+              name='interest_four'
               value={interest_four}
               onChange={(e) => onChange(e)}
               required
             />
-            <p className="uploadpic">
+            <p className='uploadpic'>
               Drag and drop or paste image here to upload You can also browse
               from your computer
             </p>
@@ -294,15 +294,15 @@ const UpdateProfile = () => {
 
           <div>
             <input
-              className="inputboxsubs"
-              type="text"
-              placeholder="Enter Fun Fact 5"
-              name="interest_five"
+              className='inputboxsubs'
+              type='text'
+              placeholder='Enter Fun Fact 5'
+              name='interest_five'
               value={interest_five}
               onChange={(e) => onChange(e)}
               required
             />
-            <p className="uploadpic">
+            <p className='uploadpic'>
               Drag and drop or paste image here to upload You can also browse
               from your computer
             </p>
@@ -315,74 +315,71 @@ const UpdateProfile = () => {
             required
           /> */}
           </div>
-          <h2 className="subscriptionheader">Connect With Me!</h2>
-          <h3 className="subscriptionheaderdetails">
-            Interests, accomplishments, pets, classifieds etc.
-          </h3>
+          <h2 className='subscriptionheader'>Connect With Me!</h2>
 
-          <div className="socialmedia">
+          <div className='socialmedia'>
             <a
-              href="https://www.instagram.com/transitiontotechlife/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fa fa-facebook"
+              href='https://www.instagram.com/transitiontotechlife/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='fa fa-facebook'
             >
               {" "}
             </a>
 
             <a
-              href="https://www.instagram.com/transitiontotechlife/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fa fa-instagram"
+              href='https://www.instagram.com/transitiontotechlife/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='fa fa-instagram'
             >
               {" "}
             </a>
 
             <a
-              href="https://www.instagram.com/transitiontotechlife/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fa fa-twitter"
+              href='https://www.instagram.com/transitiontotechlife/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='fa fa-twitter'
             >
               {" "}
             </a>
 
             <a
-              href="https://linkedin.com/in/reginaclarke/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fa fa-linkedin"
+              href='https://linkedin.com/in/reginaclarke/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='fa fa-linkedin'
             >
               {" "}
             </a>
 
             <a
-              href="https://www.instagram.com/transitiontotechlife/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fa fa-youtube"
+              href='https://www.instagram.com/transitiontotechlife/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='fa fa-youtube'
             >
               {" "}
             </a>
 
             <a
-              href="https://www.instagram.com/transitiontotechlife/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fa fa-pinterest"
+              href='https://www.instagram.com/transitiontotechlife/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='fa fa-pinterest'
             >
               {" "}
             </a>
             <a
-              href="https://github.com/ReginaClarke"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fa fa-github"
+              href='https://github.com/ReginaClarke'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='fa fa-github'
             >
               {" "}
             </a>
-            <input className="updateButton" type="submit" value="Submit" />
+            <input className='updateButton' type='submit' value='Submit' />
           </div>
           {/* <div> 
             <input
