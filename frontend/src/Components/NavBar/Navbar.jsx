@@ -8,7 +8,7 @@ import "./Header.css";
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <div className="nav">
-      <img src="logo_vertical_white.png" alt="Datadog logo" class="logo"></img>
+      <img src="logo_vertical_white.png" alt="Datadog logo" className="logo"></img>
 
       <nav className="row">
         <NavLink to="/home">Home</NavLink>
@@ -16,10 +16,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <NavLink to="/updateprofile">Profile</NavLink>
       </nav>
       <div>
-        <Link onClick={logout} to="#!">
-          <i className="fas fa-sign-out-alt" />{" "}
+        <NavLink onClick={logout} to="/">
           <span className="hide-sm">Logout</span>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
@@ -38,7 +37,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <nav>
-      {/* <h1>PawPrint</h1> */}
       {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
     </nav>
   );
