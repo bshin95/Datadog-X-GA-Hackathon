@@ -1,0 +1,48 @@
+
+.goToRegisterPage {
+  text-decoration: none;
+  color: black;
+  font-size: x-small;
+}
+
+/*------------LOGIN/LANDING--------*/
+
+.screenHeader {
+  margin: 0em auto;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+.loginPage {
+  display: flexbox;
+  text-align: center;
+  background-color: rgb(215, 221, 234);
+  min-height: 120vh;
+  margin: auto;
+  background-image: url("/img/pawprint.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* opacity: .5; */
+}
+
+
+
+.question {
+  border-radius: 50%;
+  background-color: rgb(208, 208, 208);
+  width: 1em;
+  text-align: center;
+  border: 0.1em solid black;
+  margin: auto;
+}
+
+.loginButton {
+  background-color: rgb(234, 115, 118);
+  color: white;
+  height: 3em;
+  width: fit-content;
+  border-radius: 2%;
+  margin: 2em auto;
+  font-size: 1em;
+}

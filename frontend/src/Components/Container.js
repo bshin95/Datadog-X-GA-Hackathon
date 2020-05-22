@@ -7,9 +7,13 @@ import Header from "./NavBar/Header"
 //import Cards from "./Cards/Cards";
 import Register from "./auth/Register"
 import Login from "./auth/Login"
-import MainPage from "./MainPage/MainPage"
+// import MainPage from "./MainPage/MainPage"
 import UsersContainer from "../components/UserContainer/UsersContainer"
 import UserDetails from "../components/UserContainer/UserDetails"
+import Home from "./Home/Home"
+// import Register from "./auth/Register";
+// import Login from "./auth/Login";
+import ChatContainer from "./Chat/ChatContainer"
 
 class Container extends Component {
   constructor(props) {
@@ -45,9 +49,10 @@ class Container extends Component {
               />
             )}
           />
+
           <Route
             exact
-            path="/updatepassword"
+            path="/register"
             render={() => (
               <Register
                 handleRegister={this.handleRegister}
@@ -56,9 +61,12 @@ class Container extends Component {
               />
             )}
           />
-          <Route exact path="/home" render={() => <MainPage />} />
+          {/* <Route exact path="/home" render={() => <MainPage />} /> */}
           <Route exact path="/users" component={UsersContainer} />
           <Route exact path="/users/:userId" component={UserDetails} />
+          <Route exact path="/home" render={() => <Home />} />
+
+          <Route exact path="/announcements" render={() => <ChatContainer />} />
         </Switch>
       </>
     )

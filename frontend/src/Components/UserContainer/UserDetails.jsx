@@ -13,7 +13,7 @@ class UserDetails extends Component {
     const { user } = this.props
     return (
       <div>
-        <Link to='/users'>All Users</Link>
+        <Link to="/users">All Users</Link>
         {user && (
           <div>
             <h1>User Details</h1>

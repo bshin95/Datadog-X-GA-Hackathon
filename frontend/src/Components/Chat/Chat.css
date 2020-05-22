@@ -1,4 +1,4 @@
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +11,11 @@
   width: 100%;
   text-align: center;
   color: white;
-}
+} */
+
+
+
+
 
 .Messages-list {
   padding: 20px 0;
@@ -72,7 +76,7 @@
   background-color: orangered;
 }
 
-form {
+/* form {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -96,4 +100,4 @@ button {
   border: none;
   border-radius: 8px;
   margin-left: 10px;
-}
+} */
