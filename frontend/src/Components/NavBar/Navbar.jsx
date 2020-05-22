@@ -17,7 +17,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </nav>
       <div>
         <NavLink onClick={logout} to="/">
-          <i className="fas fa-sign-out-alt" />{" "}
           <span className="hide-sm">Logout</span>
         </NavLink>
       </div>
@@ -38,7 +37,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <nav>
-      {/* <h1>PawPrint</h1> */}
       {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
     </nav>
   );
