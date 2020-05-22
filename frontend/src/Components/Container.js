@@ -51,13 +51,14 @@ class Container extends Component {
               />
             )}
           />
-          <Route exact path='/users' component={UsersContainer} />
-          <Route exact path='/users/:userId' component={UserDetails} />
-          <Route exact path='/home' render={() => <Home />} />
-          <Route exact path='/updateprofile' render={() => <UpdateProfile />} />
-          <Route exact path='/announcements' render={() => <ChatContainer />} />
-          <Route exact path='/news' render={() => <StoriesContainer />} />{" "}
-        </Switch>
+          <Route exact path="/users" component={UsersContainer} />
+          <Route exact path="/users/:userId" component={UserDetails} />
+          <Route exact path="/home" render={() => <Home />} />
+          <Route exact path="/updateprofile" render={() => <UpdateProfile />} />
+          <Route exact path="/announcements" render={() => <ChatContainer />} />
+          <Route exact path="/news" render={() => <StoriesContainer />} />
+          <Route exact path="/eventcalendar" render={() => <ChatContainer />} />
+            </Switch>
       </>
     );
   }

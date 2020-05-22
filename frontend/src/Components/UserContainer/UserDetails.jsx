@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const User = styled.div`
   padding: 2rem 2rem;
-  width: 100%;
+  width: 70%;
   text-align: center;
 `
 
@@ -39,12 +39,12 @@ const StyledLink = styled(Link)`
 `
 
 const AboutMe = styled.div`
+  width: 900px;
   padding: 2rem;
 `
 
 const AboutMeBox = styled.img`
   padding-top: 3rem;
-  width: 30%;
 `
 
 const AboutText = styled.p`
@@ -53,17 +53,22 @@ const AboutText = styled.p`
 `
 
 const Expand = styled.div`
-  background: #fff;
-  overflow: hidden;
-  color: #000;
-  line-height: 50px;
+  padding: 2rem 0;
+`
 
-  transition: all 0.5s ease-in-out;
-  height: 0;
+const Interests = styled.div`
+  padding: 2rem;
+`
 
-  .expand:target {
-    height: 50px;
-  }
+const TwoContain = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`
+
+const InterestImg = styled.img`
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 `
 
 class UserDetails extends Component {
@@ -98,18 +103,50 @@ class UserDetails extends Component {
           </div>
           <AboutMe>
             <AboutMeBox
-              src="https://cdn.shopify.com/s/files/1/1218/4290/products/Solid-129-Purple_1400x.jpg?v=1464824795"
+              src="https://i.imgur.com/XUuRUBV.jpg"
               alt="company logo"
               className="hometiles"
             ></AboutMeBox>
-            <div id="content">
-              <a href="#nav">
-                <span>Click Here</span>
-              </a>
-              <Expand>
-                <p>Cum enim magna parturient</p>
-              </Expand>
-            </div>
+            <Expand class="mw-900" alt="Max-width 100%">
+              <button
+                type="button"
+                class="btn btn-info"
+                data-toggle="collapse"
+                data-target="#demo"
+              >
+                Learn more about me!
+              </button>
+              <div id="demo" class="collapse">
+                {user && (
+                  <Interests>
+                    <TwoContain>
+                      <div>
+                        <InterestImg src={user.interest_one_image} />
+                        <p>{user.interest_one}</p>
+                      </div>
+                      <div>
+                        <InterestImg src={user.interest_two_image} />
+                        <p>{user.interest_one}</p>
+                      </div>
+                    </TwoContain>
+                    <TwoContain>
+                      <div>
+                        <InterestImg src={user.interest_three_image} />
+                        <p>{user.interest_two}</p>
+                      </div>
+                      <div>
+                        <InterestImg src={user.interest_four_image} />
+                        <p>{user.interest_three}</p>
+                      </div>
+                    </TwoContain>
+                    <div>
+                      <InterestImg src={user.interest_five_image} />
+                      <p>{user.interest_four}</p>
+                    </div>
+                  </Interests>
+                )}
+              </div>
+            </Expand>
           </AboutMe>
         </User>
       </Container>
