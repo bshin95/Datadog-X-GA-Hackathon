@@ -79,12 +79,7 @@ const UpdateProfile = () => {
     } else {
       const updateUser = {
         //was newUser change to update to make a put update
-        // name,
         email,
-        // phone,
-        // department,
-        // hierarchy,
-        // location,
         interest_one,
         interest_one_image,
 
@@ -130,9 +125,14 @@ const UpdateProfile = () => {
   return (
     <div className="loginPage">
       <h1 className="screenHeader">Update My Profile</h1>
-
+      {/* input below is just for demo */}
+      <div className="subscritioninputs">
+      <input placeholder="Enter Password" />
+      <br />
+      <input placeholder="Language(s)" />
+      </div>
       <div className="subscriptions">
-        <h2>Subscriptions</h2>
+        <h1 className="subscriptionheader">Subscriptions</h1>
         <ul>
           <li>DATA DOG</li>
           <li>NEWS</li>
@@ -143,11 +143,11 @@ const UpdateProfile = () => {
         </ul>
       </div>
 
-      <h2>About Me! (voluntary) </h2>
+      <h1 className="subscriptionheader">About Me! (voluntary) </h1>
 
       <form onSubmit={(e) => onSubmit(e)}>
         <div>
-          <input
+          {/* <input
             type="email"
             placeholder="Enter Email"
             name="email"
@@ -177,9 +177,10 @@ const UpdateProfile = () => {
             value={password2}
             onChange={(e) => onChange(e)}
             required
-          />
-        </div>
+          />*/}
+        </div> 
 
+        <div className="subscritioninputs">
         <div>
           <input
             type="text"
@@ -190,14 +191,14 @@ const UpdateProfile = () => {
             required
           />
 
-          <input
+          {/* <input
             type="text"
             placeholder="Enter Fun Fact images 1"
             name="interest_one_image"
             value={interest_one_image}
             onChange={(e) => onChange(e)}
             required
-          />
+          /> */}
         </div>
 
         <div>
@@ -210,14 +211,14 @@ const UpdateProfile = () => {
             required
           />
 
-          <input
+          {/* <input
             type="text"
             placeholder="Enter Fun Fact Image 2"
             name="interest_two_image"
             value={interest_two_image}
             onChange={(e) => onChange(e)}
             required
-          />
+          /> */}
         </div>
 
         <div>
@@ -230,14 +231,14 @@ const UpdateProfile = () => {
             required
           />
 
-          <input
+          {/* <input
             type="text"
             placeholder="Enter Fun Fact 3"
             name="interest_three_image"
             value={interest_three_image}
             onChange={(e) => onChange(e)}
             required
-          />
+          /> */}
         </div>
 
         <div>
@@ -250,14 +251,14 @@ const UpdateProfile = () => {
             required
           />
 
-          <input
+          {/* <input
             type="text"
             placeholder="Enter Fun Fact Image 4"
             name="interest_four_image"
             value={interest_four_image}
             onChange={(e) => onChange(e)}
             required
-          />
+          /> */}
         </div>
 
         <div>
@@ -270,17 +271,17 @@ const UpdateProfile = () => {
             required
           />
 
-          <input
+          {/* <input
             type="text"
             placeholder="Enter Fun Fact Image 5"
             name="interest_five_image"
             value={interest_five_image}
             onChange={(e) => onChange(e)}
             required
-          />
+          /> */}
         </div>
-        <h2>Connect With Me!</h2>
-        <h3>Interests, accomplishments, pets, classifieds etc.</h3>
+        <h2 className="subscriptionheader">Connect With Me!</h2>
+        <h3 className="subscriptionheaderdetails">Interests, accomplishments, pets, classifieds etc.</h3>
         <div>
           <input
             type="text"
@@ -338,7 +339,7 @@ const UpdateProfile = () => {
             required
           />
         </div>
-
+        </div>
         {/* <Link to="/" className="goToRegisterPage">
           Already have an account? Login
         </Link>

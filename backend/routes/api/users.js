@@ -6,9 +6,8 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const { check, validationResult } = require("express-validator");
 //
-const User = require("../../models/Users")
-const controllers = require("../../controllers")
-
+const User = require("../../models/Users");
+const controllers = require("../../controllers");
 
 router.post(
   "/",
@@ -23,13 +22,34 @@ router.post(
       "password",
       "Please enter a password with 6 or more characters"
     ).isLength({ min: 6 }),
+    check("interest_one").optional(),
+    check("interest_one_image").optional(),
+
+    check("interest_two").optional(),
+    check("interest_two_image").optional(),
+
+    check("interest_three").optional(),
+    check("interest_three_image").optional(),
+
+    check("interest_four").optional(),
+    check("interest_four_image").optional(),
+
+    check("interest_five").optional(),
+    check("interest_five_image").optional(),
+
+    check("facebook_url").optional(),
+    check("instagram_url").optional(),
+    check("twitter_url").optional(),
+    check("linkedin_url").optional(),
+    check("youtube_url").optional(),
+    check("pinterest_url").optional(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    //destructur to bring this out of req.body
+    //destructure to bring this out of req.body
     const {
       name,
       email,
@@ -38,6 +58,28 @@ router.post(
       hierarchy,
       location,
       password,
+      //below is only done for demo
+      interest_one,
+      interest_one_image,
+
+      interest_two,
+      interest_two_image,
+
+      interest_three,
+      interest_three_image,
+
+      interest_four,
+      interest_four_image,
+
+      interest_five,
+      interest_five_image,
+
+      facebook_url,
+      instagram_url,
+      twitter_url,
+      linkedin_url,
+      youtube_url,
+      pinterest_url,
     } = req.body;
     try {
       //the below will see if user exists
@@ -67,6 +109,28 @@ router.post(
         location,
         avatar,
         password,
+        //below is only done for demo
+        interest_one,
+        interest_one_image,
+
+        interest_two,
+        interest_two_image,
+
+        interest_three,
+        interest_three_image,
+
+        interest_four,
+        interest_four_image,
+
+        interest_five,
+        interest_five_image,
+
+        facebook_url,
+        instagram_url,
+        twitter_url,
+        linkedin_url,
+        youtube_url,
+        pinterest_url,
       });
 
       //encrypt the password
@@ -102,8 +166,8 @@ router.post(
   }
 );
 
-router.get("/", controllers.getAllUsers)
+router.get("/", controllers.getAllUsers);
 
-router.get("/:id", controllers.getUser)
+router.get("/:id", controllers.getUser);
 
-module.exports = router
+module.exports = router;
