@@ -1,4 +1,4 @@
-import React from "react"
+import React from "./node_modules/react"
 import DayCard from "./DayCard"
 // import apiConfig from "./apiKeys"
 

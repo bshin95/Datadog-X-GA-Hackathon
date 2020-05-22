@@ -1,5 +1,5 @@
-import React from "react";
-import Navbar from "./Navbar";
+import React from "react"
+import Navbar from "./Navbar"
 // import WeekContainer from "../Weather/WeekContainer";
 import "./Header.css"
 
@@ -7,8 +7,8 @@ const Header = (props) => (
   <header>
     <Navbar />
     {/* <WeekContainer /> */}
-    <hr/>
+    <hr />
   </header>
-);
+)
 
-export default Header;
+export default Header
