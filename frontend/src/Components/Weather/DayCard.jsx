@@ -1,27 +1,36 @@
-import React from "./node_modules/react"
-var moment = require("./node_modules/moment")
+import React from "react"
+import styled from "styled-components"
+
+var moment = require("moment")
+
+const Forecast = styled.div`
+  display: flex;
+`
+
+const CardOne = styled.div``
+
+const CardTwo = styled.div``
 
 const DayCard = ({ reading }) => {
   let newDate = new Date()
   const weekday = reading.dt * 1000
   newDate.setTime(weekday)
 
-  // const imgURL = `owf owf-${reading.weather[0].id} owf-5x`
 
   return (
-    <div>
-      <div className="card">
+    <Forecast>
+      <CardOne>
         <h3 className="card-title">{moment(newDate).format("dddd")}</h3>
         <p className="text-muted">
-          {moment(newDate).format("MMMM Do, h:mm a")}
         </p>
-        {/* <i className={imgURL}></i> */}
+      </CardOne>
+      <CardTwo>
         <h2>{Math.round(reading.main.temp)} °F</h2>
         <div className="card-body">
           <p className="card-text">{reading.weather[0].description}</p>
         </div>
-      </div>
-    </div>
+      </CardTwo>
+    </Forecast>
   )
 }
 
