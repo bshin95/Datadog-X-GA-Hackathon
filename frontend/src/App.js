@@ -19,8 +19,7 @@ const App = () => {
     <div>
       <Container />
       <ChatContainer />
-      <Form />
-
+      {/* <Form /> */}
     </div>
   )
 }

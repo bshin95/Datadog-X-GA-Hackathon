@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import React from "react"
-import { NavLink, Link } from "react-router-dom"
-import { connect } from "react-redux"
-import PropTypes from "prop-types"
-import { logout } from "../../actions/auth"
-=======
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
 import "./Header.css";
->>>>>>> 8ef975e587b00c03e46404180ba8dc635bea5da2
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
