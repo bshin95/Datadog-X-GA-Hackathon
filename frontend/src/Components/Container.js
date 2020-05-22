@@ -3,27 +3,21 @@ import { Route, Switch } from "react-router-dom"
 import { withRouter } from "react-router"
 import Header from "./NavBar/Header"
 //import WeekContainer from "./Weather/WeekContainer";
-//import Navbar from "./NavBar/Navbar";
-//import Cards from "./Cards/Cards";
 import Register from "./auth/Register"
 import Login from "./auth/Login"
-// import MainPage from "./MainPage/MainPage"
-import UsersContainer from "../components/UserContainer/UsersContainer"
-import UserDetails from "../components/UserContainer/UserDetails"
+import UsersContainer from "./UserContainer/UsersContainer"
+import UserDetails from "./UserContainer/UserDetails"
 import Home from "./Home/Home"
-// import Register from "./auth/Register";
-// import Login from "./auth/Login";
 import ChatContainer from "./Chat/ChatContainer"
+import UpdateProfile from './auth/UpdateProfile'
+import { StoriesContainer } from "./News/StoriesContainer";
 
 class Container extends Component {
   constructor(props) {
     super(props)
     this.state = {
       currentUser: null,
-      // authFormData: {
-      //   username: "",
-      //   password: "",
-    }
+    };
   }
 
   async componentDidMount() {
@@ -33,10 +27,7 @@ class Container extends Component {
   render() {
     return (
       <>
-        <Header
-        // currentUser={this.state.currentUser}
-        // handleLogout={this.handleLogout}
-        />
+        <Header/>
         <Switch>
           <Route
             exact
@@ -61,12 +52,14 @@ class Container extends Component {
               />
             )}
           />
-          {/* <Route exact path="/home" render={() => <MainPage />} /> */}
           <Route exact path="/users" component={UsersContainer} />
           <Route exact path="/users/:userId" component={UserDetails} />
           <Route exact path="/home" render={() => <Home />} />
+          <Route exact path="/updateprofile" render={() => <UpdateProfile />} />
 
           <Route exact path="/announcements" render={() => <ChatContainer />} />
+
+          <Route exact path="/news" render={() => <StoriesContainer />} />
         </Switch>
       </>
     )
