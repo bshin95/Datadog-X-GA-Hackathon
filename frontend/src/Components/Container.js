@@ -42,7 +42,11 @@ class Container extends Component {
           />
           <Route
             exact
+<<<<<<< HEAD
+            path='/register'
+=======
             path="/register"
+>>>>>>> eeea6d4615df158d48220628a254b80b5eaf2653
             render={() => (
               <Register
                 handleRegister={this.handleRegister}
