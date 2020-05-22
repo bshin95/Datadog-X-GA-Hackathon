@@ -1,25 +1,36 @@
 import React from "react";
 // import Grid from "react-css-grid";
 import "./Home.css";
-import Search from "../Search/Search"
+import Search from "../Search/Search";
+import { NavLink } from "react-router-dom";
+// import { StoriesContainer } from "../News/StoriesContainer";
+
 class Home extends React.Component {
   render() {
     return (
-<>
+      <>
         <Search />
-        
-      <div className='gridContainer'>
-        <div className='gridCard'>
+
+        {/* <StoriesContainer /> */}
+
+        <div className='gridContainer'>
+          <div className='gridCard'>
             <div>
-            <img src="logo_vertical_white.png" alt="Datadog logo" class="logo"></img>
+              <img
+                src='logo_vertical_white.png'
+                alt='Datadog logo'
+                class='logo'
+              ></img>
+            </div>
+            <NavLink to='/news'>
+              <div>news</div>
+            </NavLink>
+            <div>2</div>
+            <div>Column</div>
+            <div>Column</div>
+            <div>Column</div>
           </div>
-          <div>Column</div>
-          <div>Column</div>
-          <div>Column</div>
-          <div>Column</div>
-          <div>Column</div>
         </div>
-      </div>
       </>
     );
   }

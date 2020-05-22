@@ -12,7 +12,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
       <nav className="row">
         <NavLink to="/home">Home</NavLink>
-        <NavLink to="/search">Search</NavLink>
+        <NavLink to="/users">Search</NavLink>
         <NavLink to="/updateprofile">Profile</NavLink>
       </nav>
       <div>
@@ -30,7 +30,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <img
           src="logo_vertical_white.png"
           alt="Datadog logo"
-          class="logo"
+          className="logo"
         ></img>
       </Link>
     </div>

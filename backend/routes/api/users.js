@@ -6,7 +6,9 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const { check, validationResult } = require("express-validator");
 //
-const User = require("../../models/Users");
+const User = require("../../models/Users")
+const controllers = require("../../controllers")
+
 
 router.post(
   "/",
@@ -100,4 +102,8 @@ router.post(
   }
 );
 
-module.exports = router;
+router.get("/", controllers.getAllUsers)
+
+router.get("/:id", controllers.getUser)
+
+module.exports = router

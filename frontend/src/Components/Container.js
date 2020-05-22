@@ -1,24 +1,27 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import { withRouter } from "react-router";
-import Header from "./NavBar/Header";
+import React, { Component } from "react"
+import { Route, Switch } from "react-router-dom"
+import { withRouter } from "react-router"
+import Header from "./NavBar/Header"
 //import WeekContainer from "./Weather/WeekContainer";
-import Home from "./Home/Home";
-import Register from "./auth/Register";
-import Login from "./auth/Login";
-import ChatContainer from "./Chat/ChatContainer";
+import Register from "./auth/Register"
+import Login from "./auth/Login"
+import UsersContainer from "./UserContainer/UsersContainer"
+import UserDetails from "./UserContainer/UserDetails"
+import Home from "./Home/Home"
+import ChatContainer from "./Chat/ChatContainer"
 import UpdateProfile from './auth/UpdateProfile'
+import { StoriesContainer } from "./News/StoriesContainer";
 
 class Container extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       currentUser: null,
     };
   }
 
   async componentDidMount() {
-    this.setState({});
+    this.setState({})
   }
 
   render() {
@@ -28,7 +31,7 @@ class Container extends Component {
         <Switch>
           <Route
             exact
-            path="/"
+            path='/'
             render={() => (
               <Login
                 handleLogin={this.handleLogin}
@@ -49,14 +52,18 @@ class Container extends Component {
               />
             )}
           />
+          <Route exact path="/users" component={UsersContainer} />
+          <Route exact path="/users/:userId" component={UserDetails} />
           <Route exact path="/home" render={() => <Home />} />
           <Route exact path="/updateprofile" render={() => <UpdateProfile />} />
 
-          <Route exact path="/announcements" render={() => <ChatContainer />} />
+          <Route exact path='/announcements' render={() => <ChatContainer />} />
+
+          <Route exact path='/news' render={() => <StoriesContainer />} />
         </Switch>
       </>
-    );
+    )
   }
 }
 
-export default withRouter(Container);
+export default withRouter(Container)
