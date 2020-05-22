@@ -1,13 +1,18 @@
 import React from "react";
 // import Grid from "react-css-grid";
-import "../Cards/Cards.css";
-
-class Cards extends React.Component {
+import "./Home.css";
+import Search from "../Search/Search"
+class Home extends React.Component {
   render() {
     return (
+<>
+        <Search />
+        
       <div className='gridContainer'>
         <div className='gridCard'>
-          <div>Column</div>
+            <div>
+            <img src="logo_vertical_white.png" alt="Datadog logo" class="logo"></img>
+          </div>
           <div>Column</div>
           <div>Column</div>
           <div>Column</div>
@@ -15,11 +20,12 @@ class Cards extends React.Component {
           <div>Column</div>
         </div>
       </div>
+      </>
     );
   }
 }
 
-export default Cards;
+export default Home;
 
 // <div className='Grid-Cards'>
 //   <Grid width={320} gap={24}>
