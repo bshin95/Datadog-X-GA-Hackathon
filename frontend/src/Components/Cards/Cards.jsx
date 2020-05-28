@@ -1,29 +1,29 @@
-import React from "./node_modules/react";
+import React from "react"
 // import Grid from "react-css-grid";
-import "./Cards.css";
+import "./Cards.css"
 import Search from "../Search/Search"
 class Cards extends React.Component {
   render() {
     return (
-<>
+      <>
         <Search />
-        
-      <div className='gridContainer'>
-        <div className='gridCard'>
-          <div>Column</div>
-          <div>Column</div>
-          <div>Column</div>
-          <div>Column</div>
-          <div>Column</div>
-          <div>Column</div>
+
+        <div className="gridContainer">
+          <div className="gridCard">
+            <div>Column</div>
+            <div>Column</div>
+            <div>Column</div>
+            <div>Column</div>
+            <div>Column</div>
+            <div>Column</div>
+          </div>
         </div>
-      </div>
       </>
-    );
+    )
   }
 }
 
-export default Cards;
+export default Cards
 
 // <div className='Grid-Cards'>
 //   <Grid width={320} gap={24}>

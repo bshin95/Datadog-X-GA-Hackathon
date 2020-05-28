@@ -1,13 +1,13 @@
-import axios from 'axios';
-import store from '../store';
-import { LOGOUT, CLEAR_PROFILE } from '../actions/types';
+import axios from "axios"
+import store from "../store"
+import { LOGOUT, CLEAR_PROFILE } from "../actions/types"
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: `${process.env.REACT_APP_API_URL}/api`,
   headers: {
-    'Content-Type': 'application/json'
-  }
-});
+    "Content-Type": "application/json",
+  },
+})
 /**
  intercept any error responses from the api
  and check if the token is no longer valid.
@@ -16,14 +16,14 @@ const api = axios.create({
 **/
 
 api.interceptors.response.use(
-  res => res,
-  err => {
-    if (err.response.data.msg === 'Token is not valid') {
-      store.dispatch({ type: LOGOUT });
-      store.dispatch({ type: CLEAR_PROFILE });
+  (res) => res,
+  (err) => {
+    if (err.response.data.msg === "Token is not valid") {
+      store.dispatch({ type: LOGOUT })
+      store.dispatch({ type: CLEAR_PROFILE })
     }
-    return Promise.reject(err);
+    return Promise.reject(err)
   }
-);
+)
 
-export default api;
+export default api

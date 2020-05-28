@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const connectDB = require("./config/db")
 const app = express()
 //connect db
@@ -6,6 +7,7 @@ connectDB()
 
 //initialize middleware
 app.use(express.json({ extended: false }))
+app.use(cors({ origin: ['http://localhost:3000', 'https://marvelous-run.surge.sh', 'http://marvelous-run.surge.sh'] }))
 
 app.get("/", (req, res) => res.send("API Running"))
 
