@@ -9,6 +9,16 @@ import styled from "styled-components"
 const Container = styled.div`
   display: flex;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+    height: 100%;
+    display: inline;
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    height: 100%;
+    display: inline;
+  }
 `
 
 const Directory = styled.div`

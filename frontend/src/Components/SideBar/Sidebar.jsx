@@ -13,12 +13,27 @@ const SidebarContainer = styled.div`
   width: 100%;
   max-width: 100%;
   background-color: #d7dbeb;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    height: 100%;
+  }
 `
 
 const GridLayout = styled.div`
   display: flex;
   padding: 1rem 2rem;
   justify-content: center;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+    display: none;
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    display: none;
+  }
 `
 
 const LeftIcons = styled.div`

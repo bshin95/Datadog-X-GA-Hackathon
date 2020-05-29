@@ -8,6 +8,14 @@ const SearchContainer = styled.div`
 const SearchBar = styled.input`
   width: 800px;
   text-align: left;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+    width: 728px;
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    width: 330px;
+  }
 `
 
 const SearchInput = ({ onChange }) => (

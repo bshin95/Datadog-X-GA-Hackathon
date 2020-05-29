@@ -8,12 +8,30 @@ import styled from "styled-components"
 const Container = styled.div`
   display: flex;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+    display: inline;
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    display: inline;
+  }
 `
 
 const User = styled.div`
   padding: 2rem 2rem;
   width: 70%;
   text-align: center;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+    padding: 0;
+    width: 100%;
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    padding: 0;
+    width: 100%;
+  }
 `
 
 const Info = styled.div`
@@ -41,10 +59,30 @@ const StyledLink = styled(Link)`
 const AboutMe = styled.div`
   width: 900px;
   padding: 2rem;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+    width: 600px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    width: 250px;
+    padding: 0;
+    margin: 0 auto;
+  }
 `
 
 const AboutMeBox = styled.img`
   padding-top: 3rem;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+    width: 100%;
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    width: 75%;
+  }
 `
 
 const AboutText = styled.p`
@@ -69,6 +107,16 @@ const InterestImg = styled.img`
   width: 200px;
   height: 200px;
   object-fit: cover;
+
+  @media (max-width: ${(props) => props.theme.tablet}) {
+    width: 150px;
+    height: 150px;
+  }
+
+  @media (max-width: ${(props) => props.theme.mobile}) {
+    width: 100px;
+    height: 100px;
+  }
 `
 
 class UserDetails extends Component {

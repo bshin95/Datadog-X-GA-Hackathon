@@ -9,7 +9,7 @@ class Home extends React.Component {
       <>
         <div className="gridContainer">
           <div className="gridCard">
-            <div>
+            <div className="card">
               <img
                 src="companylogo.png"
                 alt="company logo"
@@ -18,7 +18,7 @@ class Home extends React.Component {
               <p>PAWPRINT</p>
             </div>
 
-            <div>
+            <div className="card">
               <Link to="/news">
                 <img
                   src="companynews.png"
@@ -29,7 +29,7 @@ class Home extends React.Component {
               <p>NEWS</p>
             </div>
 
-            <div>
+            <div className="card">
               <Link to="/newhires">
                 <img
                   src="new-hires-puppies.png"
@@ -40,7 +40,7 @@ class Home extends React.Component {
               <p>NEW HIRES</p>
             </div>
 
-            <div>
+            <div className="card">
               <Link to="/humanresources">
                 <img
                   src="HRNews.png"
@@ -51,7 +51,7 @@ class Home extends React.Component {
               <p>HUMAN RESOURCES</p>
             </div>
 
-            <div>
+            <div className="card">
               <Link to="/development">
                 <img
                   src="tech.png"
@@ -62,7 +62,7 @@ class Home extends React.Component {
               <p>DEVELOPMENT</p>
             </div>
 
-            <div>
+            <div className="card">
               <Link to="/eventcalendar">
                 <img
                   src="announcements.png"
